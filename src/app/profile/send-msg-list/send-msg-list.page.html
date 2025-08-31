@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/super-admin"  ></ion-back-button>
+    </ion-buttons>
+    <ion-title>Message Support List</ion-title>
+    <ion-buttons slot="end">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="login-container">
+
+  <ion-grid class="user-table-alt">
+    <!-- Table Header -->
+    <ion-row class="table-header">
+      <ion-col size="2">ID</ion-col>
+      <ion-col size="2">Date</ion-col>
+      <ion-col size="2">Admin</ion-col>
+      <ion-col size="2">User</ion-col>
+      <ion-col size="4">Message</ion-col>
+
+     
+    </ion-row>
+
+    <!-- Table Rows -->
+    <ion-row *ngFor="let user of information; let i = index"
+             [ngClass]="{ 'even-row': i % 2 === 0, 'odd-row': i % 2 !== 0 }">
+      <ion-col size="1">{{ user.id }}</ion-col>
+      <ion-col size="2">{{ user.date }}</ion-col>
+      <ion-col size="2">{{ user.admin_email }}</ion-col>
+      <ion-col size="2">{{ user.user_email }}</ion-col>
+      <ion-col size="4">{{ user.message }}</ion-col>
+
+      <ion-col size="1">
+        
+        <ion-button size="small" fill="clear" color="danger" (click)="deleteUser(user.id)">
+          <ion-icon slot="icon-only" name="trash-outline"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
+

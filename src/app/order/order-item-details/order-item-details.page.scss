@@ -1,0 +1,43 @@
+.user-table-alt {
+  font-size: 15px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.table-header {
+  background: #c0c0c0;
+  color: white;
+  font-weight: 600;
+  padding: 5px 0;
+  border: 1px;
+}
+
+ion-row {
+  border-bottom: 1px solid #eee;
+  padding: 5px 0;
+}
+
+.even-row {
+  background-color: #e5e4e2;
+}
+
+.odd-row {
+  background-color: #d3d3d3;
+}
+
+ion-col {
+  padding: 5px 5px;
+}
+
+
+
+
+.login-container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  // background-image: url("../../assets/img/background.png");
+  background-size: cover;
+  background: linear-gradient(to right, rgb(165, 180, 252), rgb(192, 132, 252));
+}

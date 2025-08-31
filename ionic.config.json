@@ -1,0 +1,7 @@
+{
+  "name": "QAPROFIL-Factory",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

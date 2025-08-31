@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start">
+      <ion-back-button default-href="welcome-user"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Order List</ion-title>
+    <ion-buttons slot="end">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="login-container">
+
+  <ion-grid class="user-table-alt">
+    <!-- Table Header -->
+    <ion-row class="table-header">
+      <ion-col size="4">Order No.</ion-col>
+     
+      <ion-col size="7">Date</ion-col>
+
+
+    </ion-row>
+
+    <!-- Table Rows -->
+    <ion-row *ngFor="let user of information; let i = index"
+             [ngClass]="{ 'even-row': i % 2 === 0, 'odd-row': i % 2 !== 0 }">
+      <ion-col size="4">{{ user.request_no }}</ion-col>
+    
+      <ion-col size="7">{{ user.created_at }}</ion-col>
+
+      <ion-col size="1">
+        <ion-button size="small" fill="clear" color="medium" (click)="viewRequest(user.request_no)">
+          <ion-icon slot="icon-only" name="eye-outline"></ion-icon>
+        </ion-button>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
+

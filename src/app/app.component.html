@@ -1,0 +1,91 @@
+
+
+
+
+
+
+<ion-app>
+
+  <ion-split-pane contentId="main-content">
+
+    <ion-menu contentId="main-content" type="overlay">
+      <ion-content>
+        <div class="login-container">
+          <ion-list id="inbox-list">
+            <ion-list-header>
+
+              <table class="logo">
+
+                <tr>
+                  <td> <img height="50" width="50" src="assets/img/logo.png" /></td>
+                  <td>
+                  <td>
+                    <font face="Times New Roman" color="white" size="6" class="title"> <b>QAPROFIL</b></font>
+                  </td>
+                </tr>
+              </table>
+
+
+
+
+
+
+
+
+
+
+
+            </ion-list-header>
+            <ion-note>Info&#64;qaprofil.com.qa</ion-note>
+
+            <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index" class="masters">
+              <ion-item routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" routerLinkActive="selected">
+                <ion-icon aria-hidden="true" slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
+
+
+
+                <h2 class="text">
+                  <b>
+                    <font face="Cambria" color="0000" size="4">{{p.title}} </font>
+                  </b>
+                </h2>
+
+
+              </ion-item>
+            </ion-menu-toggle>
+
+            <ion-menu-toggle auto-hide="false" class="masters">
+              <ion-item routerDirection="root" (click)="alertExit()" lines="none" detail="false" routerLinkActive="selected">
+                <ion-icon aria-hidden="true" slot="start"  name="log-out"></ion-icon>
+
+
+
+                <h2 class="text">
+                  <b>
+                    <font face="Cambria" color="0000" size="4">Exit </font>
+                  </b>
+                </h2>
+
+
+              </ion-item>
+            </ion-menu-toggle>
+
+
+
+          </ion-list>
+
+        </div>
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet id="main-content"></ion-router-outlet>
+
+  </ion-split-pane>
+
+
+
+
+
+</ion-app>
+
+
+

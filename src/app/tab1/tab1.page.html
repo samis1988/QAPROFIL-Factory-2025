@@ -1,0 +1,134 @@
+
+<div class="ion-page" id="main-content">
+  <ion-header>
+   
+	  <ion-toolbar class="ion-toolbar"   no-border>
+      <ion-title>QAPROFIL</ion-title>
+      <ion-buttons slot="end">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content [fullscreen]="true" class="back">
+    <div class="banner">
+      <img src="../assets/img/banner.svg" />
+
+      <div class="caption ion-padding">
+        Discover our large<br>
+        set of products
+      </div>
+
+      <div class="search">
+
+
+        <h2 class="left" (click)="navigate()">  About </h2>
+      </div>
+    </div>
+
+    <div class="title">
+      <h2>Products</h2>
+
+
+    </div>
+
+   
+
+
+    <swiper-container [slidesPerView]="2.25" [loop]="true" autoplay-delay="5000">
+      <swiper-slide *ngFor="let p of products ">
+        <a class="hidden-link" (click)="goToCart(p.component)"  >
+          <ion-col class="ion-text-left">
+            
+
+
+            <ion-card>
+              <img alt="Silhouette of mountains" src="{{p.image}}" />
+              <ion-card-header>
+
+
+                <h2 style="font-size: 12px; color:black; font-weight: bold;">{{p.title}}</h2>
+              </ion-card-header>
+ 
+            </ion-card>
+
+
+
+
+          </ion-col>
+        </a>
+      </swiper-slide>
+
+    </swiper-container>
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+    <div class="default-top-padding title">
+      <h2>Youtube Videos</h2>
+    </div>
+
+    <div class="live-event">
+      <img src="../assets/events/ev3.png" />
+
+      <div class="info">
+        <div class="content">
+          <h6>Youtube Video</h6>
+
+          <p class="stats">
+            <span><ion-icon name="eye"></ion-icon>&nbsp;2.3K</span><span><ion-icon name="heart"></ion-icon>&nbsp;3758</span>
+          </p>
+
+          <p class="location"><ion-icon name='location'></ion-icon>Middle east, Qatar</p>
+
+        </div>
+
+        <div class="indicator">
+          <div> <a class="hidden-link" href="/main-video"> Watch</a></div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="iconplay">
+       
+        <ion-button href={{url}} color="success">
+          <ion-icon name="logo-whatsapp"></ion-icon>
+        </ion-button>
+        <ion-button href="tel:0097455820925" color="light">
+          <ion-icon name="call"></ion-icon>
+        </ion-button>
+
+        <ion-button href="tel:0097444601734" color="light">
+          <ion-icon name="phone-portrait"></ion-icon>
+        </ion-button>
+
+        <ion-button href="https://www.qaprofil.com.qa" color="light">
+          <ion-icon name="planet"></ion-icon>
+        </ion-button>
+
+
+        <ion-button href="mailto:info@qaprofil.com.qa" color="light">
+          <ion-icon name="mail"></ion-icon>
+        </ion-button>
+
+        <ion-button href="https://www.google.com/maps/place/Qatar+Profiles+and+False+Ceilings+Factory/@25.1522135,51.4037525,15z/data=!4m5!3m4!1s0x0:0x9f2059796b4c5580!8m2!3d25.1522135!4d51.4037525" color="light">
+          <ion-icon name="location"></ion-icon>
+        </ion-button>
+  
+    </div>
+
+   

@@ -1,0 +1,127 @@
+ 
+
+
+<ion-header>
+  <ion-toolbar class="ion-toolbar">
+    <ion-buttons slot="start">
+      <ion-back-button default-href="aluminium"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Prepainted Perimeter Angle</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button routerLink="/panier">
+        <ion-icon name="cart-outline"></ion-icon>
+        <ion-badge color="success" *ngIf=" getCart_length().length > 0" class="cart-badge">
+          {{  getCart_length().length }}
+        </ion-badge>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+
+
+
+
+<ion-content [fullscreen]="true">
+
+  <div class="login-container">
+    <ion-img ionImgViewer
+             title="Demo"
+             name="imaaage"
+             text="Directive"
+             scheme="light"
+             src="{{image1}}"
+             (click)="openViewer(image1)" imageViewer>
+    </ion-img>
+
+
+    <ion-card-content>
+      <p><font face="Times New Roman" color="black" size="3">Item's Name:</font> <font face="Arial Black" color="black" size="3"> Perimeter Angle</font></p>
+      <p><font face="Times New Roman" color="black" size="3">Item's Code:</font> <font face="Arial Black" color="black" size="3">QSGPA22-3.6-40MWC</font></p>
+
+
+      <p><font face="Times New Roman" color="black" size="3">Perimeter Angle : Fixed at the perimeter of the desired area to level and carry the edges of the Aluminum strips of the false ceilings.</font></p>
+      <p><font face="Times New Roman" color="black" size="4">* Customized lengths are available :</font> </p>
+
+      <p><font face="Times New Roman" color="black" size="3">- Thickness  / mm :</font> <font face="Arial Black" color="black" size="3"> 0.4  </font> 
+      <font face="Times New Roman" color="black" size="3">- Length / mm&nbsp;: </font> <font face="Arial Black" color="black" size="3"> 3600 </font></p>
+
+      <ion-card class="custom-card">
+
+        <ion-card>
+          <ion-item lines="none">
+
+            <ion-label>
+              <h2>Thickness</h2>
+
+            </ion-label>
+
+            <ion-select value="0" [(ngModel)]="selectedSize" placeholder="Select Thickness">
+              <ion-select-option value="0.45">0.45 mm</ion-select-option>
+              <ion-select-option value="0.50">0.50 mm</ion-select-option>
+              <ion-select-option value="0.60">0.60 mm</ion-select-option>
+            </ion-select>
+
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Qty</ion-label>
+
+            <ion-buttons slot="end">
+              <ion-button size="small" (click)="decreaseQty()">−</ion-button>
+
+              <ion-input #qtyInput
+                         type="number"
+                         value="1"
+                         inputmode="numeric"
+                         style="width: 50px; text-align: center;"></ion-input>
+
+              <ion-button size="small" (click)="increaseQty()">+</ion-button>
+            </ion-buttons>
+          </ion-item>
+
+
+
+
+          <ion-button (click)="addtocart(qtyInput)" color="success" shape="round">
+            <ion-icon name="cart-outline" slot="start"></ion-icon>
+            Add
+          </ion-button>
+        </ion-card>
+      </ion-card>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+
+
+
+    </ion-card-content>
+
+  </div>
+</ion-content>
+
+<ion-tab-bar class="ion-tab-bar" slot="bottom">
+
+  <ion-tab-button tab="tab1" [routerLink]="['/tabs/tab1']">
+    <ion-icon aria-hidden="true" name="home"></ion-icon>
+    <ion-label>Home</ion-label>
+  </ion-tab-button>
+
+  <ion-tab-button tab="tab2" [routerLink]="['/tabs/tab2']">
+    <ion-icon aria-hidden="true" name="cart"></ion-icon>
+    <ion-label>Products</ion-label>
+  </ion-tab-button>
+
+  <ion-tab-button tab="tab3" [routerLink]="['/tabs/tab3']">
+    <ion-icon aria-hidden="true" name="log-out"></ion-icon>
+    <ion-label>Login</ion-label>
+  </ion-tab-button>
+
+</ion-tab-bar>

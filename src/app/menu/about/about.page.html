@@ -1,0 +1,66 @@
+ 
+<ion-toolbar class="ion-toolbar">
+  <ion-buttons slot="start">
+    <ion-back-button default-href="tabs/tab1"></ion-back-button>
+  </ion-buttons>
+  <ion-title> About </ion-title>
+  <ion-buttons slot="end">
+    <ion-menu-button></ion-menu-button>
+  </ion-buttons>
+</ion-toolbar>
+
+<ion-content [fullscreen]="true">
+  <div class="login-container">
+
+    <ion-card-content>
+      <p><font face="Times New Roman" color="black" size="5"><b>What is Qaprofil</b></font></p>
+
+      <p>
+        <font face="Times New Roman" color="black" size="3">
+          QAPROFIL - Qatar Profiles and False Ceilings Factory. Established in 2003 under the pavilion of the leader company in the field of Building materials, Al Amodi Group for Trading and General Contracting.
+        </font>
+      </p>
+
+
+      <p> <font face="Times New Roman" color="black" size="5"><b> What do we serve</b></font>  </p>
+
+      <p>
+        <font face="Times New Roman" color="black" size="3">
+          QAPROFIL serves in the production field of slitting utilities, indoor false ceilings, dry wall partitions accessories, light gauge steel buildings construction and steel buildings roof sheets and accessories.
+        </font>
+      </p>
+
+
+      <p><font face="Times New Roman" color="black" size="5"><b> Qaprofil Standards</b></font></p>
+
+      <p>
+        <font face="Times New Roman" color="black" size="3">
+          QAPROFIL's recognition in the local market as a leader in the field should always be a definite choice preserving it's customers' satisfaction and it's products Quality Assurance.
+        </font>
+      </p>
+    </ion-card-content>
+  </div>
+
+
+
+  <ion-tab-bar class="ion-tab-bar" slot="bottom">
+
+    <ion-tab-button tab="tab1" [routerLink]="['/tabs/tab1']">
+      <ion-icon aria-hidden="true" name="home"></ion-icon>
+      <ion-label>Home</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="tab2" [routerLink]="['/tabs/tab2']">
+      <ion-icon aria-hidden="true" name="cart"></ion-icon>
+      <ion-label>Products</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="tab3" [routerLink]="['/tabs/tab3']">
+      <ion-icon aria-hidden="true" name="log-out"></ion-icon>
+      <ion-label>Login</ion-label>
+    </ion-tab-button>
+
+  </ion-tab-bar>
+ 
+
+</ion-content>

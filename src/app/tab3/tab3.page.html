@@ -1,0 +1,49 @@
+<ion-content class="ion-padding" [fullscreen]="true">
+
+  <div class="login-container">
+    <form [formGroup]="form" novalidate>
+      <div class="ion-padding">
+
+
+        <ion-item>
+
+          <ion-input placeholder="Email" class="input" [(ngModel)]="gEmail" type="email" formControlName="email"></ion-input>
+          <ion-icon name="mail-outline"></ion-icon>
+        </ion-item>
+
+        <ion-item>
+
+          <ion-input class="input" [(ngModel)]="gPassword" placeholder="Password" type="password" formControlName="password"></ion-input>
+          <ion-icon name="lock-closed-outline"></ion-icon>
+        </ion-item>
+
+        <div>
+          <ion-button expand="block" class="primary" (click)="loginuser(form)" type="submit" [disabled]="!form.valid">Login</ion-button>
+
+        </div>
+        <p> <font face="Times New Roman" color="red" size="2"> {{message}} </font></p>
+        <div>
+          <div>
+
+          </div>
+          <a [routerLink]="['/reset-password']">Forgot my Password</a>
+        </div>
+        <div>
+          Don't have a account?<p> <a [routerLink]="['/signup']">Create new account</a>
+        </div>
+      </div>
+    </form>
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+</ion-content>

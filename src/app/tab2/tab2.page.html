@@ -1,0 +1,59 @@
+ 
+
+
+<ion-header>
+  <ion-toolbar class="ion-toolbar">
+    <ion-buttons slot="start">
+      <ion-back-button default-href="tabs/tab1"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Products</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button routerLink="/panier">
+        <ion-icon name="cart-outline"></ion-icon>
+        <ion-badge color="success" *ngIf=" getCart_length().length > 0" class="cart-badge">
+          {{  getCart_length().length }}
+        </ion-badge>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+
+
+
+
+<ion-content class="login-container" [fullscreen]="true">
+
+  <ion-list class="login-container">
+    <ion-list-header><h2 style="font-size: 18px; color:black; font:bold;  "> All Products </h2></ion-list-header>
+    <ion-item *ngFor="let p of products ">
+
+
+      <ion-avatar slot="start">
+        <img alt="avatar" src="{{p.image}}" />
+      </ion-avatar>
+      <ion-label><h2 style="font-size: 14px; color:black;  ">{{p.title}}</h2></ion-label>
+
+      <ion-button size="small" color="medium" (click)="goToCart(p.component)">
+        View
+        <ion-icon style="float: right; align-items: center;" expand="block" slot="end" name="eye"></ion-icon>
+      </ion-button>
+
+    </ion-item>
+
+  </ion-list>
+
+
+
+
+
+
+
+</ion-content>
+
+

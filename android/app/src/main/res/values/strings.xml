@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">QAPROFIL-Factory</string>
+    <string name="title_activity_main">QAPROFIL-Factory</string>
+    <string name="package_name">qaprofil.qatar.com</string>
+    <string name="custom_url_scheme">qaprofil.qatar.com</string>
+</resources>

@@ -1,0 +1,130 @@
+ 
+
+
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start">
+      <ion-back-button default-href="aluminium"></ion-back-button>
+    </ion-buttons>
+    <ion-title>User Dashboard</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button routerLink="/panier">
+        <ion-icon name="cart-outline"></ion-icon>
+        <ion-badge color="success" *ngIf=" getCart_length().length > 0" class="cart-badge">
+          {{  getCart_length().length }}
+        </ion-badge>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+
+
+
+
+
+<ion-content class="login-container">
+  <div class="login-container">
+    <!-- User Info -->
+    <ion-card>
+      <ion-card-content class="scrollable-content">
+        <ion-item lines="none">
+          <ion-avatar slot="start">
+            <img src="assets/img/user.jpg" />
+          </ion-avatar>
+          <ion-label>
+            <h2>{{user.name}}</h2>
+            <p>{{userId}}</p>
+          </ion-label>
+          <ion-avatar (click)="confirmLogout()" style="width: 20px; height: 20px;" slot="end">
+            <img src="assets/img/exit.png" />
+          </ion-avatar>
+        </ion-item>
+        
+
+        <!-- Quick Actions -->
+        <ion-grid>
+          <ion-row>
+            <ion-col size="3">
+              <ion-button expand="block" [routerLink]="['/request']" fill="outline" color="primary">
+                <ion-icon slot="icon-only" name="add-outline"></ion-icon>
+              </ion-button>
+              <p class="ion-text-center">New Request</p>
+            </ion-col>
+            <ion-col size="3">
+              <ion-button [routerLink]="['/user']" expand="block" fill="outline" color="success">
+                <ion-icon slot="icon-only" name="settings-outline"></ion-icon>
+              </ion-button>
+              <p class="ion-text-center">Settings</p>
+            </ion-col>
+            <ion-col size="3">
+              <ion-button expand="block" (click)="log_super_admin()" fill="outline" color="medium">
+                <ion-icon slot="icon-only" name="person-outline"></ion-icon>
+              </ion-button>
+              <p class="ion-text-center">Admin</p>
+            </ion-col>
+            <ion-col size="3">
+              <ion-button [routerLink]="['/order-list']" expand="block" fill="outline" color="warning">
+                <ion-icon slot="icon-only" name="reorder-four-outline"></ion-icon>
+              </ion-button>
+              <p class="ion-text-center">Order List</p>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+
+
+        <!-- //********************************************************************************************************************** -->
+        <!-- Quick Actions -->
+      
+        <!-- Task Progress -->
+        <ion-card>
+          <!-- Stats Cards -->
+          <ion-grid>
+
+
+            <ion-row>
+              <ion-col size="6">
+                <ion-card [routerLink]="['/request-list']">
+                  <ion-card-header>
+                    <ion-card-title><font face="Times New Roman" color="black" size="4"> Request List</font></ion-card-title>
+                  </ion-card-header>
+                  <ion-card-content>  {{total_request}}</ion-card-content>
+                </ion-card>
+              </ion-col>
+              <ion-col size="6">
+                <ion-card [routerLink]="['/send-msg-list']">
+                  <ion-card-header>
+                    <ion-card-title><font face="Times New Roman" color="black" size="4">Support Msg</font> </ion-card-title>
+                  </ion-card-header>
+                  <ion-card-content>  {{total_msg_support}}</ion-card-content>
+                </ion-card>
+              </ion-col>
+            </ion-row>
+
+
+
+          </ion-grid>
+        </ion-card>
+        <!-- Latest Notifications -->
+        <ion-list (click)="msg_suport_read(userId)">
+          <ion-list-header>
+            <ion-label>Recent Notifications</ion-label>
+          </ion-list-header>
+          <ion-item>
+            <ion-icon name="mail-unread-outline" slot="start"></ion-icon>
+            <ion-label>New message from support  <font style="color: red;">({{total_msg_support_unread}})</font> </ion-label>
+            <p></p>
+            <p></p>
+            <p></p>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+    </div>
+</ion-content>
+

@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start">
+      <ion-back-button default-href="super-admin"></ion-back-button>
+    </ion-buttons>
+    <ion-title>All Order List</ion-title>
+    <ion-buttons slot="end">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="login-container">
+
+  <ion-grid class="user-table-alt">
+    <!-- Table Header -->
+    <ion-row class="table-header">
+      <ion-col style="font-size: 12px; font-weight: bold;" size="3">Order No.</ion-col>
+      <ion-col style="font-size: 12px; font-weight: bold;" size="6">User Email</ion-col>
+
+      <ion-col style="font-size: 12px; font-weight: bold;" size="3">Date</ion-col>
+
+
+    </ion-row>
+
+    <!-- Table Rows -->
+    <ion-row *ngFor="let user of information; let i = index"
+             [ngClass]="{ 'even-row': i % 2 === 0, 'odd-row': i % 2 !== 0 }">
+      <ion-col style="font-size: 10px; font-weight: bold;" size="2">{{ user.request_no }}</ion-col>
+      <ion-col style="font-size: 10px; font-weight: bold;" size="6">{{ user.user_email }}</ion-col>
+
+      <ion-col style="font-size: 10px; font-weight: bold;" size="3">{{ user.created_at }}</ion-col>
+
+      <ion-col size="1">
+        <ion-button size="small" fill="clear" color="medium" (click)="viewRequest(user.request_no)">
+          <ion-icon slot="icon-only" name="eye-outline"></ion-icon>
+        </ion-button>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
+

@@ -1,0 +1,15 @@
+<ion-content [fullscreen]="true">
+  <div class="header">
+    <ion-title class="title" size="large">Welcome Back</ion-title>
+    <p class="subtitle">Sign in to access your account</p>
+  </div>
+  <form [formGroup]="form" novalidate (ngSubmit)="onSignIn(form)">
+    <div class="form-group">
+      <input type="text" class="form-control" id="email" placeholder="Enter email" formControlName="email">
+    </div>
+    <div class="form-group">
+      <input type="password" class="form-control" id="password" placeholder="Password" formControlName="password">
+    </div><button class="btn btn-primary btn-block" type="submit" [disabled]="!form.valid">Sign In</button>
+
+  </form>
+</ion-content>

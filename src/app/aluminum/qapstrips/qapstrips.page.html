@@ -1,0 +1,185 @@
+ 
+
+<ion-header>
+  <ion-toolbar class="ion-toolbar">
+    <ion-buttons slot="start">
+      <ion-back-button default-href="aluminium"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Qap 50 Strips</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button routerLink="/panier">
+        <ion-icon name="cart-outline"></ion-icon>
+        <ion-badge color="success" *ngIf=" getCart_length().length > 0" class="cart-badge">
+          {{  getCart_length().length }}
+        </ion-badge>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<ion-content [fullscreen]="true">
+  <div class="login-container">
+
+
+    <swiper-container #swiper
+                      (afterinit)="swiperReady()"
+                      (slidechange)="swiperSlideChanged($event)"
+                      [loop]="true"
+                      [pagination]="true"
+                      zoom-max-ratio="3"
+                      zoom-min-ratio="1"
+                      [zoom]="true" autoplay-delay="5000">
+
+      <swiper-slide *ngFor="let p of products ">
+
+        <ion-col class="ion-text-left">
+
+
+
+          <ion-card>
+            <img alt="Silhouette of mountains" src="{{p.image}}" (click)="openViewer(p.image)" imageViewer />
+            <ion-card-header>
+
+
+
+            </ion-card-header>
+
+          </ion-card>
+
+
+
+
+        </ion-col>
+
+      </swiper-slide>
+
+    </swiper-container>
+
+    <ion-card-content>
+      <p><font face="Times New Roman" color="black" size="3">Item's Name:</font> <font face="Arial Black" color="black" size="3"> Qap 50 Strips</font></p>
+      <p><font face="Times New Roman" color="black" size="3">Item's Code:</font> <font face="Arial Black" color="black" size="3">QAQ50</font></p>
+
+
+      <p><font face="Times New Roman" color="black" size="3">Qap 50 : A 41mm wide strips recessed with 9mm groove of 7.5mm deep. The ideal design for wood imitation colors for aluminum false ceilings strips. </font></p>
+      <p><font face="Times New Roman" color="black" size="4">* Customized lengths are available :</font> </p>
+
+      <p>
+        <font face="Times New Roman" color="black" size="3">- Thickness  / mm :</font> <font face="Arial Black" color="black" size="3"> 0.38  </font>
+        <font face="Times New Roman" color="black" size="3">- Length / mm : </font> <font face="Arial Black" color="black" size="3"> 4000-6000 </font>
+      </p>
+
+
+      <ion-card class="custom-card">
+
+        <ion-card>
+          <ion-item lines="none">
+
+            <ion-label>
+              <h2>Color</h2>
+
+            </ion-label>
+
+            <ion-select value="0" [(ngModel)]="selectedColor" placeholder="Select Color">
+              <ion-select-option value="Matt Dark Wood">Matt Dark Wood</ion-select-option>
+              <ion-select-option value="Matt White Wood">Matt White Wood</ion-select-option>
+              <ion-select-option value="Shiny White">Shiny White</ion-select-option>
+              <ion-select-option value="Shiny Beige">Shiny Beige</ion-select-option>
+              <ion-select-option value="Shiny Bronze">Shiny Bronze</ion-select-option>
+              <ion-select-option value="Shiny Chrome">Shiny Chrome</ion-select-option>
+
+
+            </ion-select>
+
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Qty</ion-label>
+
+            <ion-buttons slot="end">
+              <ion-button size="small" (click)="decreaseQty()">−</ion-button>
+
+              <ion-input #qtyInput
+                         type="number"
+                         value="1"
+                         inputmode="numeric"
+                         style="width: 50px; text-align: center;"></ion-input>
+
+
+              <ion-button size="small" (click)="increaseQty()">+</ion-button>
+            </ion-buttons>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>L-m</ion-label>
+
+
+
+            <ion-input #LmInput
+                       type="number"
+                       value="1"
+                       inputmode="numeric"
+                       style="width: 50px; text-align: center;"></ion-input>
+
+
+          </ion-item>
+
+
+          <ion-button (click)="addtocart(qtyInput)" color="success" shape="round">
+            <ion-icon name="cart-outline" slot="start"></ion-icon>
+            Add
+          </ion-button>
+        </ion-card>
+      </ion-card>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+
+
+    </ion-card-content>
+
+  </div>
+
+</ion-content>
+
+<ion-tab-bar class="ion-tab-bar" slot="bottom">
+
+  <ion-tab-button tab="tab1" [routerLink]="['/tabs/tab1']">
+    <ion-icon aria-hidden="true" name="home"></ion-icon>
+    <ion-label>Home</ion-label>
+  </ion-tab-button>
+
+  <ion-tab-button tab="tab2" [routerLink]="['/tabs/tab2']">
+    <ion-icon aria-hidden="true" name="cart"></ion-icon>
+    <ion-label>Products</ion-label>
+  </ion-tab-button>
+
+  <ion-tab-button tab="tab3" [routerLink]="['/tabs/tab3']">
+    <ion-icon aria-hidden="true" name="log-out"></ion-icon>
+    <ion-label>Login</ion-label>
+  </ion-tab-button>
+
+</ion-tab-bar>

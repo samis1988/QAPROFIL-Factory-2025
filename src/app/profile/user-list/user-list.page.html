@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start">
+      <ion-back-button default-href="super-admin"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Users List</ion-title>
+    <ion-buttons slot="end">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="login-container">
+
+  <ion-grid class="user-table-alt">
+    <!-- Table Header -->
+    <ion-row class="table-header">
+      <ion-col size="1">ID</ion-col>
+      <ion-col size="3">Full Name</ion-col>
+      <ion-col size="3">Phone</ion-col>
+      <ion-col size="4">Email</ion-col>
+      <ion-col size="1"> </ion-col>
+    </ion-row>
+
+    <!-- Table Rows -->
+    <ion-row *ngFor="let user of information; let i = index"
+             [ngClass]="{ 'even-row': i % 2 === 0, 'odd-row': i % 2 !== 0 }">
+      <ion-col size="1">{{ user.id }}</ion-col>
+      <ion-col size="3">{{ user.name }}</ion-col>
+      <ion-col size="3">{{ user.phone}}</ion-col>
+      <ion-col size="4">{{ user.email }}</ion-col>
+
+      <ion-col size="1">
+
+
+        <ion-button size="small" fill="clear" color="medium" (click)="viewUser(user.email)">
+          <ion-icon slot="icon-only" name="eye-outline"></ion-icon>
+        </ion-button>
+         
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
+

@@ -1,0 +1,79 @@
+
+<ion-toolbar class="ion-toolbar">
+  <ion-buttons slot="start">
+    <ion-back-button default-href="tabs/tab2"></ion-back-button>
+  </ion-buttons>
+  <ion-title>Portacabin</ion-title>
+  <ion-buttons slot="end">
+    <ion-menu-button></ion-menu-button>
+  </ion-buttons>
+</ion-toolbar>
+
+
+ 
+
+<ion-content [fullscreen]="true">
+
+  <ion-list class="login-container">
+
+    <swiper-container #swiper
+                      (afterinit)="swiperReady()"
+                      (slidechange)="swiperSlideChanged($event)"
+                      [loop]="true"
+                      [pagination]="true"
+                      zoom-max-ratio="3"
+                      zoom-min-ratio="1"
+                      [zoom]="true" autoplay-delay="5000">
+
+      <swiper-slide *ngFor="let p of products ">
+
+        <ion-col class="ion-text-left">
+
+
+
+          <ion-card>
+            <img alt="Silhouette of mountains" src="{{p.image}}" (click)="openViewer(p.image)" imageViewer />
+            <ion-card-header>
+
+
+
+            </ion-card-header>
+
+          </ion-card>
+
+
+
+
+        </ion-col>
+
+      </swiper-slide>
+
+    </swiper-container>
+
+
+
+    <iframe [src]="showVideo(videoUrl)" width="100%" height="50%" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
+
+  </ion-list>
+</ion-content>
+<ion-tab-bar class="ion-tab-bar" slot="bottom">
+
+  <ion-tab-button tab="tab1" [routerLink]="['/tabs/tab1']">
+    <ion-icon aria-hidden="true" name="home"></ion-icon>
+    <ion-label>Home</ion-label>
+  </ion-tab-button>
+
+  <ion-tab-button tab="tab2" [routerLink]="['/tabs/tab2']">
+    <ion-icon aria-hidden="true" name="cart"></ion-icon>
+    <ion-label>Products</ion-label>
+  </ion-tab-button>
+
+  <ion-tab-button tab="tab3" [routerLink]="['/tabs/tab3']">
+    <ion-icon aria-hidden="true" name="log-out"></ion-icon>
+    <ion-label>Login</ion-label>
+  </ion-tab-button>
+
+</ion-tab-bar>

@@ -1,0 +1,56 @@
+  
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start">
+      <ion-back-button default-href="welcome-user"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Order Items</ion-title>
+    <ion-buttons slot="end">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+
+
+
+
+<ion-content  >
+  <div class="login-container">
+    <ion-card style="width: 100%;">
+      <ion-card *ngFor="let users of information">
+        <ion-item lines="none">
+          <ion-thumbnail slot="start">
+            <img [src]="users.item_image" />
+          </ion-thumbnail>
+          <ion-label>
+            <h2>{{ users.item_name }}</h2>
+            <p>Qty :{{ users.item_quantity}}</p>
+            <p>Thkns:{{ users.item_thicnees}} mm / L-m :{{ users.item_l_m}} m</p>
+            <p>Color :{{ users.item_color}}</p>
+
+          </ion-label>
+        </ion-item>
+
+
+      </ion-card>
+
+      <ion-card *ngIf="information.length">
+        <ion-card-content>
+          <ion-item lines="none">
+            <ion-label><strong>Total</strong></ion-label>
+            <ion-note slot="end">{{ information.length}} Items</ion-note>
+          </ion-item>
+
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card *ngIf="information.length === 0">
+        <ion-card-content>
+          Your panier is empty.
+        </ion-card-content>
+      </ion-card>
+    </ion-card>
+  </div>
+</ion-content>

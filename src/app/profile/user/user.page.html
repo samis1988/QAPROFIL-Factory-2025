@@ -1,0 +1,71 @@
+
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start">
+      <ion-back-button default-href="welcome-user"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Profile</ion-title>
+    <ion-buttons slot="end">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content class="ion-padding" [fullscreen]="true">
+  <div class="login-container">
+
+    <form (ngSubmit)="submitForm(emailInput,fullnameInput,phoneInput,companyInput)" #form="ngForm">
+
+
+      <div class="ion-padding">
+        <div>
+          <ion-title>Profile</ion-title>
+
+        </div>
+
+        <ion-item class="custom-underline">
+          <ion-label position="floating">Email</ion-label>
+          <ion-input class="ion-input" #emailInput value="{{userId}}" readonly> </ion-input>
+        </ion-item>
+
+
+
+
+        <ion-item class="custom-underline">
+          <ion-label position="floating">Full Name</ion-label>
+          <ion-input #fullnameInput value={{user.name}}></ion-input>
+        </ion-item>
+
+
+
+
+        <ion-item class="custom-underline">
+          <ion-label position="floating">Phone</ion-label>
+          <ion-input #phoneInput value={{user.phone}}></ion-input>
+        </ion-item>
+
+        <ion-item class="custom-underline">
+          <ion-label position="floating">Company Name</ion-label>
+          <ion-input #companyInput value={{user.company}}></ion-input>
+        </ion-item>
+
+
+
+
+
+        <ion-button expand="full" type="submit" [disabled]="!form.valid">Submit</ion-button>
+
+      </div>
+    </form>
+
+
+  </div>
+</ion-content>
+
+
+ 
+
+
+

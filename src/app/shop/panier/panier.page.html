@@ -1,0 +1,79 @@
+  
+<ion-header>
+  <ion-toolbar class="ion-toolbar">
+    <ion-buttons slot="start">
+      <ion-back-button default-href="aluminium"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Panier</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button routerLink="/panier">
+        <ion-icon name="cart-outline"></ion-icon>
+        <ion-badge color="success" *ngIf=" getCart_length().length > 0" class="cart-badge">
+          {{  getCart_length().length }}
+        </ion-badge>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+
+
+
+
+<ion-content>
+  <ion-card *ngFor="let item of cartItemsw">
+    <ion-item lines="none">
+      <ion-thumbnail slot="start">
+        <img [src]="item.image" />
+      </ion-thumbnail>
+      <ion-label>
+        <h2>{{ item.name }}</h2>
+        <p>Qty :{{ item.quantity}}</p>
+        <p>Thkns:{{ item.Thicnees}} mm / L-m :{{ item.l_m}} m</p>
+        <p>Color :{{ item.color}}</p>
+
+      </ion-label>
+    </ion-item>
+
+    <ion-card-content>
+      <ion-grid>
+        <ion-row class="ion-align-items-center">
+          <ion-col size="6">
+            <ion-button size="small" (click)="decreaseQty(item)">-</ion-button>
+            <span style="margin: 0 10px;">{{ item.quantity }}</span>
+            <ion-button size="small" (click)="increaseQty(item)">+</ion-button>
+          </ion-col>
+          <ion-col size="6" class="ion-text-end">
+            <ion-button color="danger" size="small" (click)="removeItem(item)">
+              <ion-icon name="trash-outline" slot="start"></ion-icon>
+              Remove
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="cartItems.length">
+    <ion-card-content>
+      <ion-item lines="none">
+        <ion-label><strong>Total</strong></ion-label>
+        <ion-note slot="end">{{ getTotal()}} Pcs</ion-note>
+      </ion-item>
+      <ion-button expand="block" color="success" (click)="submit()">
+        Checkout
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="cartItems.length === 0">
+    <ion-card-content>
+      Your panier is empty.
+    </ion-card-content>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,45 @@
+
+ 
+
+<ion-toolbar class="ion-toolbar">
+   
+  <ion-title>Welcome To QAPROFIL</ion-title>
+</ion-toolbar>
+
+
+
+<ion-content [fullscreen]="true">
+  <div class="login-container">
+
+    <ion-card-content>
+
+      <swiper-container #swiperEx
+                        [pagination]="{type:'bullets',clickable:true}"
+                        [scrollbar]="{draggable:true}"
+                        [loop]="true"
+                        [keyboard]="true"
+                        effect="flip">
+        <swiper-slide *ngFor="let p of products ">
+
+
+          <img src="{{p.image}}" />
+
+
+
+        </swiper-slide>
+
+      </swiper-container>
+
+      <div>
+
+        <ion-button shape="round" (click)="onSlidePrev()"> Prev</ion-button>
+        <ion-button shape="round" (click)="onSlideNext()"> Next</ion-button>
+        <ion-button shape="round" color="tertiary" style="float: right;" href="/tabs/tab1"> Skip</ion-button>
+
+
+      </div>
+    </ion-card-content>
+  </div>
+
+  
+</ion-content>

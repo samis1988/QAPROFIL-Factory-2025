@@ -1,0 +1,74 @@
+<ion-header>
+
+  <ion-toolbar color="tertiary">
+
+    <ion-title>User Details</ion-title>
+    <ion-buttons slot="end">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="login-container">
+
+  <!-- User Info -->
+  <ion-card class="login-container">
+    <ion-item lines="none">
+      <ion-avatar slot="start">
+        <img src="assets/img/user.jpg" />
+      </ion-avatar>
+      <ion-label>
+        <h2>E-mail</h2>
+        <p><font style="color: midnightblue; font-weight: bold;">{{user.email}}</font></p>
+      </ion-label>
+    </ion-item>
+
+
+    <!-- Quick Actions -->
+    <ion-card>
+      <ion-card-content class="scrollable-content">
+        <!-- Task Progress -->
+        <!-- Stats Cards -->
+        <ion-grid>
+          <ion-row>
+            <ion-col  >
+              <ion-card>
+                <ion-card-header>
+                  <ion-card-title><font face="Times New Roman" color="black" size="4">Full Name </font></ion-card-title>
+                </ion-card-header>
+                <ion-card-content> <font style="color: midnightblue; font-weight: bold;"> {{user.name}}</font></ion-card-content>
+              </ion-card>
+            </ion-col>
+
+          </ion-row>
+          <ion-row>
+            <ion-col >
+              <ion-card>
+                <ion-card-header>
+                  <ion-card-title><font face="Times New Roman" color="black" size="4">Phone </font></ion-card-title>
+                </ion-card-header>
+                <ion-card-content> <font style="color: midnightblue; font-weight: bold;"> {{user.phone}}</font></ion-card-content>
+              </ion-card>
+            </ion-col>
+
+          </ion-row>
+
+          <ion-row>
+            <ion-col  >
+              <ion-card>
+                <ion-card-header>
+                  <ion-card-title><font face="Times New Roman" color="black" size="4">Company Name </font></ion-card-title>
+                </ion-card-header>
+                <ion-card-content> <font style="color: midnightblue; font-weight: bold;"> {{user.company_name}}</font></ion-card-content>
+              </ion-card>
+            </ion-col>
+
+          </ion-row>
+
+        </ion-grid>
+         
+      </ion-card-content>
+    </ion-card>
+  </ion-card>
+</ion-content>
+

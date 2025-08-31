@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start">
+      <ion-back-button default-href="welcome-user"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Send Msg To User</ion-title>
+    <ion-buttons slot="end">
+      <ion-buttons slot="end">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="login-container">
+
+  <div class="login-container">
+    <p></p>
+    <ion-card>
+      <ion-item lines="none">
+        <ion-avatar slot="start">
+          <img src="assets/img/user.jpg" />
+        </ion-avatar>
+        <ion-label>
+          <h2> {{name_user}} </h2>
+          <p>{{admin_email}}</p>
+        </ion-label>
+      </ion-item>
+    </ion-card>
+    <!-- User Info -->
+
+
+    <form (ngSubmit)="submitForm(emailInput )" #form="ngForm">
+
+
+      <div>
+        <ion-title>Send Message</ion-title>
+
+      </div>
+
+      <ion-item class="custom-underline">
+        <ion-label position="floating"></ion-label>
+        <ion-input value="{{message}}" class="ion-input" #emailInput readonly> </ion-input>
+      </ion-item>
+
+
+
+
+      <ion-textarea rows="6" #myTextarea
+                    placeholder="Type something..."></ion-textarea>
+
+
+      <ion-button expand="full" type="submit" [disabled]="!form.valid">Submit</ion-button>
+
+
+    </form>
+  </div>
+</ion-content>

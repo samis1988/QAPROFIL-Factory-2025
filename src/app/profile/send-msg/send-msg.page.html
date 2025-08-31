@@ -1,0 +1,42 @@
+ 
+
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start">
+      <ion-back-button default-href="send-msg"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Search Users</ion-title>
+    <ion-buttons slot="end">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="ion-padding">
+  <div class="login-container">
+    <ion-card>
+      <ion-searchbar [(ngModel)]="searchTerm"
+                     (ionInput)="searchUserss($event)"
+                     placeholder="Search by name..."
+                     debounce="300"></ion-searchbar>
+
+      <ion-list *ngIf="users.length > 0">
+        <ion-item *ngFor="let user of users">
+          <ion-label>
+            <h2>{{ user.name }}</h2>
+            <p>{{ user.email }}</p>
+
+          </ion-label>
+          <ion-button size="small" fill="clear" color="danger" (click)="viewUser(user.email)">
+            <ion-icon slot="icon-only" name="send-outline"></ion-icon>
+          </ion-button>
+        </ion-item>
+      </ion-list>
+
+      <ion-text color="medium" *ngIf="users.length === 0 && searchTerm">
+        No users found.
+      </ion-text>
+    </ion-card>
+  </div>
+</ion-content>

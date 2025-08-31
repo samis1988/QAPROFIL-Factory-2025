@@ -1,0 +1,66 @@
+
+
+<ion-toolbar class="ion-toolbar">
+  <ion-buttons slot="start">
+    <ion-back-button default-href="aluminium"></ion-back-button>
+  </ion-buttons>
+  <ion-title> Prepainted Perimeter Angle </ion-title>
+  <ion-buttons slot="end">
+    <ion-menu-button></ion-menu-button>
+  </ion-buttons>
+</ion-toolbar>
+
+ 
+
+<ion-content [fullscreen]="true">
+  <div class="login-container">
+
+
+
+    <ion-img ionImgViewer
+             title="Demo"
+             name="imaaage"
+             text="Directive"
+             scheme="light"
+             src="{{image1}}"
+             (click)="openViewer(image1)" imageViewer>
+    </ion-img>
+
+
+
+
+    <ion-card-content>
+      <p><font face="Times New Roman" color="black" size="3">Item's Name:</font> <font face="Arial Black" color="black" size="3"> Perimeter Angle</font></p>
+      <p><font face="Times New Roman" color="black" size="3">Item's Code:</font> <font face="Arial Black" color="black" size="3">QSGPA22-3.6-40MWC</font></p>
+
+
+      <p><font face="Times New Roman" color="black" size="3">Perimeter Angle : Fixed at the perimeter of the desired area to level and carry the edges of the Aluminum strips of the false ceilings.</font></p>
+      <p><font face="Times New Roman" color="black" size="4">* Customized lengths are available :</font> </p>
+
+      <p><font face="Times New Roman" color="black" size="3">- Thickness  / mm :</font> <font face="Arial Black" color="black" size="3"> 0.4  </font></p>
+      <p><font face="Times New Roman" color="black" size="3">- Length / mm&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: </font> <font face="Arial Black" color="black" size="3"> 3600 </font></p>
+
+
+
+    </ion-card-content>
+  </div>
+</ion-content>
+
+<ion-tab-bar class="ion-tab-bar" slot="bottom">
+
+  <ion-tab-button tab="tab1" [routerLink]="['/tabs/tab1']">
+    <ion-icon aria-hidden="true" name="home"></ion-icon>
+    <ion-label>Home</ion-label>
+  </ion-tab-button>
+
+  <ion-tab-button tab="tab2" [routerLink]="['/tabs/tab2']">
+    <ion-icon aria-hidden="true" name="cart"></ion-icon>
+    <ion-label>Products</ion-label>
+  </ion-tab-button>
+
+  <ion-tab-button tab="tab3" [routerLink]="['/tabs/tab3']">
+    <ion-icon aria-hidden="true" name="log-out"></ion-icon>
+    <ion-label>Login</ion-label>
+  </ion-tab-button>
+
+</ion-tab-bar>
