@@ -22,9 +22,9 @@ export class Panel100Page implements OnInit {
     { title: 'Airport Color White', component: 'gypsum', image: 'assets/img/home/qap100/Airport-QAP-100-Color-White.png' },
     { title: 'Airport Shiny Chrome', component: 'gypsum', image: 'assets/img/home/qap100/Airport-QAP-100-SC.png' },
 
-    { title: 'Bathroom Math Dark Wood', component: 'gypsum', image: 'assets/img/home/qap100/Bathroom-QAP-100-Math-Dark-.png' },
+    { title: 'Bathroom Matt Dark Wood', component: 'gypsum', image: 'assets/img/home/qap100/Bathroom-QAP-100-Math-Dark-.png' },
     { title: 'GYM Color MWWD', component: 'gypsum', image: 'assets/img/home/qap100/GYM---Color-MWWD.png' },
-    { title: 'Bathroom Math White', component: 'gypsum', image: 'assets/img/home/qap100/Bathroom-QAP-100-Math-White.png' },
+    { title: 'Bathroom Matt White', component: 'gypsum', image: 'assets/img/home/qap100/Bathroom-QAP-100-Math-White.png' },
     { title: 'Bathroom Shiny Light', component: 'gypsum', image: 'assets/img/home/qap100/Bathroom-QAP-100-Shiny-Ligh.png' },
     { title: 'GYM Color MRBL', component: 'gypsum', image: 'assets/img/home/qap100/GYM--Color-MRBL.png' },
    

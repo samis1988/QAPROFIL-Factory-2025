@@ -18,7 +18,7 @@ export class AluminiumPage implements OnInit {
     { title: '84R and Joints Strips ', component: 'stripsjoint', image: 'assets/img/qaprofil/84r/1.png' },
     { title: 'Qap 50 Strips', component: 'qapstrips', image: 'assets/img/qaprofil/qap50/1.png' },
     { title: 'Qap 100 - 200 Strips', component: 'qaponetwo', image: 'assets/img/qaprofil/qap100-200/1.png' },
-    { title: 'T- Bar', component: 'tbar', image: 'assets/img/qaprofil/tbar/4.png' },
+    { title: 'Grid System', component: 'tbar', image: 'assets/img/qaprofil/tbar/4.png' },
     { title: 'Semi-Round Panel', component: 'semiround', image: 'assets/img/qaprofil/bambo/1.jpg' },
     { title: 'Photo Gallery', component: 'gallery', image: 'assets/img/qaprofil/gallery.png' }
 

@@ -17,12 +17,12 @@ import { Location } from '@angular/common';
 export class Panel84RPage implements OnInit {
 
   products: any[] = [
-    { title: '84R - SLA', component: 'gypsum', image: 'assets/img/home/84r/7---84R-SLA.png' },
-    { title: '84R - SSBL', component: 'gypsum', image: 'assets/img/home/84r/10---84R-SSBL.png' },
-    { title: '84R - ST', component: 'gypsum', image: 'assets/img/home/84r/14---134R-ST.png' },
-    { title: '84R - SB', component: 'gypsum', image: 'assets/img/home/84r/20---84R-SB---Joint-SB.png' },
-    { title: '84R - GT', component: 'gypsum', image: 'assets/img/home/84r/84R-GT.png' },
-    { title: '84R - MW', component: 'gypsum', image: 'assets/img/home/84r/84-R---MW.png' },
+    { title: 'Panel & Joint - SLA', component: 'gypsum', image: 'assets/img/home/84r/7---84R-SLA.png' },
+    { title: 'Panel & Joint - SSBL', component: 'gypsum', image: 'assets/img/home/84r/10---84R-SSBL.png' },
+    { title: 'Panel & Joint - ST', component: 'gypsum', image: 'assets/img/home/84r/14---134R-ST.png' },
+    { title: 'Panel & Joint - SB', component: 'gypsum', image: 'assets/img/home/84r/20---84R-SB---Joint-SB.png' },
+    { title: 'Panel & Joint - GT', component: 'gypsum', image: 'assets/img/home/84r/84R-GT.png' },
+    { title: 'Panel & Joint - MW', component: 'gypsum', image: 'assets/img/home/84r/84-R---MW.png' },
      
 
 

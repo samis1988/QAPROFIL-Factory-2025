@@ -19,23 +19,23 @@ export class Panel50Page implements OnInit {
 
   products: any[] = [
 
-    { title: 'Qap 100 - Pergola', component: 'gypsum', image: 'assets/img/home/Pergola/1-mddw.png' },
-    { title: 'Qap 100 -  Pergola', component: 'gypsum', image: 'assets/img/home/Pergola/2-purgula_Mwwd.png' },
-    { title: 'Qap 100 - Pergola', component: 'gypsum', image: 'assets/img/home/Pergola/gold.png' },
-    { title: 'Qap 100 -  Pergola', component: 'gypsum', image: 'assets/img/home/Pergola/golden2.png' },
-    { title: 'Qap 100 -  Pergola', component: 'gypsum', image: 'assets/img/home/Pergola/selver.png' },
+    { title: 'Qap 100 -Matt Dark Wood', component: 'gypsum', image: 'assets/img/home/Pergola/1-mddw.jpg' },
+    { title: 'Qap 100  -  Matt white Wood', component: 'gypsum', image: 'assets/img/home/Pergola/2-purgula_Mwwd.jpg' },
+    { title: 'Qap 100 - Shiny Bronze', component: 'gypsum', image: 'assets/img/home/Pergola/gold.jpg' },
+    { title: 'Qap 100 - Shiny Bronze', component: 'gypsum', image: 'assets/img/home/Pergola/golden2.jpg' },
+    { title: 'Qap 100 - Shiny Chrome', component: 'gypsum', image: 'assets/img/home/Pergola/selver.jpg' },
 
 
-    { title: 'Qap 50 - Math Dark Wood', component: 'gypsum', image: 'assets/img/home/qap50/50-Bathroom-Math-Dark-Wood.png' },
-    { title: 'Qap 50 -  Math white Wood', component: 'gypsum', image: 'assets/img/home/qap50/50-Bathroom-Math-white-Wood.png' },
+    { title: 'Qap 50 - Matt Dark Wood', component: 'gypsum', image: 'assets/img/home/qap50/50-Bathroom-Math-Dark-Wood.png' },
+    { title: 'Qap 50 -  Matt white Wood', component: 'gypsum', image: 'assets/img/home/qap50/50-Bathroom-Math-white-Wood.png' },
 
     { title: 'Qap 50 - Shiny Light Grey', component: 'gypsum', image: 'assets/img/home/qap50/50-Bathroom-Shiny-Light-Gre.png' },
     { title: 'Qap 100 -  Color White', component: 'gypsum', image: 'assets/img/home/qap100/Airport-QAP-100-Color-White.png' },
     { title: 'Qap 100 -Shiny Chrome', component: 'gypsum', image: 'assets/img/home/qap100/Airport-QAP-100-SC.png' },
 
-    { title: 'Qap 100 -Math Dark Wood', component: 'gypsum', image: 'assets/img/home/qap100/Bathroom-QAP-100-Math-Dark.png' },
+    { title: 'Qap 100 -Matt Dark Wood', component: 'gypsum', image: 'assets/img/home/qap100/Bathroom-QAP-100-Math-Dark.png' },
     { title: 'Qap 100 - MWWD', component: 'gypsum', image: 'assets/img/home/qap100/GYM---Color-MWWD.png' },
-    { title: 'Qap 100 - Math White', component: 'gypsum', image: 'assets/img/home/qap100/Bathroom-QAP-100-Math-White.png' },
+    { title: 'Qap 100 - Matt White', component: 'gypsum', image: 'assets/img/home/qap100/Bathroom-QAP-100-Math-White.png' },
     { title: 'Qap 100 - Shiny Light', component: 'gypsum', image: 'assets/img/home/qap100/Bathroom-QAP-100-Shiny-Ligh.png' },
     { title: 'Qap 100 - MRBL', component: 'gypsum', image: 'assets/img/home/qap100/GYM--Color-MRBL.png' },
 
@@ -44,7 +44,7 @@ export class Panel50Page implements OnInit {
     { title: 'Qap 100 - SLG', component: 'gypsum', image: 'assets/img/home/qap100/GYM---Color-SLG.png' },
     { title: 'Qap 200 -  Color White ', component: 'gypsum', image: 'assets/img/home/qap200/Bathroom -QAP-200.png' },
     { title: 'Qap 200 - Shiny Lead', component: 'gypsum', image: 'assets/img/home/qap200/Bathroom-QAP-200-.png' },
-    { title: 'Qap 200 - Math Dark Wood', component: 'gypsum', image: 'assets/img/home/qap200/QAP-200 Bathroom.png' },
+    { title: 'Qap 200 - Matt Dark Wood', component: 'gypsum', image: 'assets/img/home/qap200/QAP-200 Bathroom.png' },
 
 
 

@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\src",
-    "\\src\\app"
+    "\\src\\app",
+    "\\src\\app\\menu"
   ],
-  "SelectedNode": "\\src\\app\\shop\\panier\\panier.page.ts",
+  "SelectedNode": "\\src\\app\\menu\\lintel\\lintel.page.scss",
   "PreviewInSolutionExplorer": false
 }

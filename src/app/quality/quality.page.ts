@@ -28,7 +28,7 @@ export class QualityPage implements OnInit {
     })
 
   }
-  image1: any = "assets/img/qaprofil/iso2.jpg";
+  image1: any = "assets/img/qaprofil/iso3.jpeg";
   ngOnInit() {
   }
   async openViewer(imagee: any) {

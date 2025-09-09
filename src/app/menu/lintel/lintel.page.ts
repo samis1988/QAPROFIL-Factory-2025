@@ -13,12 +13,25 @@ import { CartService } from '../../service/cart.service';
 import { IonInput } from '@ionic/angular';
 import { ToastController } from '@ionic/angular';
 
+ 
+ 
+import { Swiper } from 'swiper';
+
+  
+
+
+
 @Component({
   selector: 'app-lintel',
   templateUrl: './lintel.page.html',
   styleUrls: ['./lintel.page.scss'],
 })
 export class LintelPage implements OnInit {
+
+  @ViewChild('swiper')
+  swiperRef: ElementRef | undefined;
+  swiper?: Swiper;
+
   products: any[] = [
     { title: 'Gypsum Ceilings', component: 'gypsum', image: 'assets/img/qaprofil/lintel/1.png' },
     { title: 'Indoor Aluminum', component: 'aluminium', image: 'assets/img/qaprofil/lintel/2.png' },
@@ -104,4 +117,23 @@ export class LintelPage implements OnInit {
     this.router.navigate(['/panier']); // or your cart page route
   }
   //****************************************************************************************
+
+  swiperSlideChanged(e: any) {
+    console.log('changed: ', e);
+  }
+  swiperReady() {
+    this.swiper = this.swiperRef?.nativeElement.swiper;
+  }
+
+  goNext() {
+    this.swiper?.slideNext();
+  }
+
+  goPrev() {
+    this.swiper?.slidePrev();
+  }
+  showVideo(video: any) {
+    return this.sanitizer.bypassSecurityTrustResourceUrl(video);
+  }
+ 
 }

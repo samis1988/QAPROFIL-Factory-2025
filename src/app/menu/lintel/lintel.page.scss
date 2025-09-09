@@ -38,3 +38,41 @@
 .custom-card {
   background-color: lightgray; /* Light gray */
 }
+
+
+
+
+swiper-container {
+  width: 100%;
+  height: 60%;
+  --swiper-pagination-bullet-inactive-color: var(--ion-color-step-200, #cccccc);
+  --swiper-pagination-color: var(--ion-color-primary, #3880ff);
+}
+
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  //background-image: url("../../../assets/img/qaprofil/new_gypsum.jpg");
+  background-size: cover;
+  background-position: center;
+  background: linear-gradient(to right, rgb(165, 180, 252), rgb(192, 132, 252));
+}
+
+.hidden-link {
+  text-decoration: none;
+}
+
+.ion-toolbar {
+  --color: white;
+  font-size: 18px;
+  --ion-background-color: #6d071a;
+}
+
+
+.ion-tab-bar {
+  --color: white;
+  font-size: 18px;
+  --ion-background-color: #6d071a;
+}

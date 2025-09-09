@@ -27,9 +27,15 @@
 <ion-content [fullscreen]="true">
   <div class="login-container">
 
+    <swiper-container #swiper
+                      (afterinit)="swiperReady()"
+                      (slidechange)="swiperSlideChanged($event)"
+                      [loop]="true"
+                      [pagination]="true"
+                      zoom-max-ratio="3"
+                      zoom-min-ratio="1"
+                      [zoom]="true" autoplay-delay="5000">
 
-
-    <swiper-container [slidesPerView]="1.25" [loop]="true" autoplay-delay="5000">
       <swiper-slide *ngFor="let p of products ">
 
         <ion-col class="ion-text-left">
@@ -56,9 +62,6 @@
     </swiper-container>
 
     <ion-card-content>
-
-
-      <p><font face="Times New Roman" color="black" size="3">Item's Code:</font> <font face="Arial Black" color="black" size="3"> QSGLNTL </font></p>
       <p><font face="Times New Roman" color="black" size="3">Lintel: Horizontal support of timber, stone, concrete, or steel across the top of a door or window.  </font></p>
 
       <p><font face="Times New Roman" color="black" size="3">- Length :</font> <font face="Arial Black" color="black" size="3">60 - 3000 </font></p>
@@ -68,8 +71,8 @@
       <ion-card class="custom-card">
 
         <ion-card>
-      
-           
+
+
           <ion-item lines="none">
 
             <ion-label>
@@ -84,7 +87,7 @@
             <ion-select value="0" [(ngModel)]="selected_Thickness" placeholder="Select Thickness">
               <ion-select-option value="1.5">1.5 mm</ion-select-option>
               <ion-select-option value="2 mm">2 mm</ion-select-option>
-              
+
             </ion-select>
 
           </ion-item>

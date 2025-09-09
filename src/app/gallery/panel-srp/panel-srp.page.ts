@@ -19,14 +19,14 @@ export class PanelSrpPage implements OnInit {
 
 
   products: any[] = [
-    { title: '184R+SRP MNDSTR and MDWD', component: 'gypsum', image: 'assets/img/home/SRP/184R-MNDSTR-SRP MDWD.png' },
-    { title: '184R+SRP Beige and Gold', component: 'gypsum', image: 'assets/img/home/SRP/184R+SRP-Beige-and-Gold.png' },
-    { title: '184R+SRP Beige and Green', component: 'gypsum', image: 'assets/img/home/SRP/184R+SRP-Beige-and-green-b.png' },
-    { title: '184R+SRP MNDSTR and MNDB', component: 'gypsum', image: 'assets/img/home/SRP/184R-MNDSTR---SRP-MNDB.png' },
-    { title: '184R+SRP MNDST and MNDBM', component: 'gypsum', image: 'assets/img/home/SRP/184R-MNDSTR---SRP-MNDBM.png' },
-    { title: '184R+SRP SW and MDWD', component: 'gypsum', image: 'assets/img/home/SRP/184R-SW---SRP-MDWD.png' },
-    { title: '184R+SRP  SRP and SSBL', component: 'gypsum', image: 'assets/img/home/SRP/184R-SW---SRP-SSBL.png' },
-    { title: '184R+SRP SRP and MGNB', component: 'gypsum', image: 'assets/img/home/SRP/SRP-MGNB.png' },
+    { title: 'Panel + SRP MNDSTR and MDWD', component: 'gypsum', image: 'assets/img/home/SRP/184R-MNDSTR-SRP MDWD.png' },
+    { title: 'Panel + SRP Beige and Gold', component: 'gypsum', image: 'assets/img/home/SRP/184R+SRP-Beige-and-Gold.png' },
+    { title: 'Panel + SRP Beige and Green', component: 'gypsum', image: 'assets/img/home/SRP/184R+SRP-Beige-and-green-b.png' },
+    { title: 'Panel + SRP MNDSTR and MNDB', component: 'gypsum', image: 'assets/img/home/SRP/184R-MNDSTR---SRP-MNDB.png' },
+    { title: 'Panel + SRP MNDST and MNDBM', component: 'gypsum', image: 'assets/img/home/SRP/184R-MNDSTR---SRP-MNDBM.png' },
+    { title: 'Panel + SRP SW and MDWD', component: 'gypsum', image: 'assets/img/home/SRP/184R-SW---SRP-MDWD.png' },
+    { title: 'Panel + SRP  SRP and SSBL', component: 'gypsum', image: 'assets/img/home/SRP/184R-SW---SRP-SSBL.png' },
+    { title: 'Panel + SRP SRP and MGNB', component: 'gypsum', image: 'assets/img/home/SRP/SRP-MGNB.png' },
      
 
 
